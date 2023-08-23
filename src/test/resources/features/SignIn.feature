@@ -1,3 +1,4 @@
+@Login
 Feature: Sign in Feature
 
   Background: 
@@ -15,6 +16,6 @@ Feature: Sign in Feature
     And User click on Create New Account button
     And User fill the signUp information with below data
       | name    | email                   | password  | confirmPassword |
-      | student | oldStudent@tekschool.us | Tek@12345 | Tek@12345       |
+      | student | oldStudent1@tekschool.us | Tek@12345 | Tek@12345       |
     And User click on SignUp button
     Then User should be logged into account page

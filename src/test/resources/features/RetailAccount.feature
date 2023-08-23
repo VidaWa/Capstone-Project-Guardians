@@ -1,3 +1,4 @@
+@RetailAccount
 Feature: Retail Account Page
   ​
 
