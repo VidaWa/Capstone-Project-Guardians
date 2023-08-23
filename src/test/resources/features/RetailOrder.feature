@@ -1,3 +1,4 @@
+@RetailOrder
 Feature: Retail Order Page
 
   Background: 
