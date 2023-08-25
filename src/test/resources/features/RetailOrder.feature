@@ -1,4 +1,4 @@
-@RetailOrder
+@TestAllScenarios
 Feature: Retail Order Page
 
   Background: 

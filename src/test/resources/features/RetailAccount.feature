@@ -1,4 +1,4 @@
-@RetailAccount
+@TestAllScenarios
 Feature: Retail Account Page
   ​
 
@@ -12,7 +12,7 @@ Feature: Retail Account Page
 
   @updateAccount
   Scenario: Verify User can update Profile Information
-    And User update Name 'GuardianVz' and Phone '2021234569'
+    And User update Name 'GuardianVH' and Phone '2021234569'
     And User click on Update button
     Then user profile information should be updated
 
@@ -21,7 +21,7 @@ Feature: Retail Account Page
     And User click on Add a payment method link
     And User fill Debit or credit card information
       | cardNumber       | nameOnCard | expirationMonth | expirationYear | securityCode |
-      | 1111222233337777 | Guardians  |              10 |           2027 |          123 |
+      | 1111222233331111 | Guardians  |              10 |           2027 |          123 |
     # Above datatable is a list of map because in map data are presented as a pair of keys and values
     And User click on Add your card button
     Then a message should be displayed 'Payment Method added sucessfully'
