@@ -1,4 +1,4 @@
-@HomePage
+@AllScenarios
 Feature: Retail Home Page
 
   Background: 

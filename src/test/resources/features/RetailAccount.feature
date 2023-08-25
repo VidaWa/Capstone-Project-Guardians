@@ -1,4 +1,4 @@
-@RetailAccount
+@AllScenarios
 Feature: Retail Account Page
   ​
 
@@ -12,7 +12,7 @@ Feature: Retail Account Page
 
   @updateAccount
   Scenario: Verify User can update Profile Information
-    And User update Name 'GuardianV' and Phone '2021234565'
+    And User update Name 'GuardianV' and Phone '2021234567'
     And User click on Update button
     Then user profile information should be updated
 
@@ -21,7 +21,7 @@ Feature: Retail Account Page
     And User click on Add a payment method link
     And User fill Debit or credit card information
       | cardNumber       | nameOnCard | expirationMonth | expirationYear | securityCode |
-      | 1111222233337777 | Guardians  |              10 |           2027 |          123 |
+      | 1111222233336666 | Guardians  |              10 |           2027 |          123 |
     # Above datatable is a list of map because in map data are presented as a pair of keys and values
     And User click on Add your card button
     Then a message should be displayed 'Payment Method added sucessfully'
@@ -33,7 +33,7 @@ Feature: Retail Account Page
     And User click on Edit option of card section
     And user edit information with below data
       | cardNumber       | nameOnCard | expirationMonth | expirationYear | securityCode |
-      | 1111222233337777 | Guards     |              12 |           2026 |          333 |
+      | 1111222233337777 | Guards     |              11 |           2026 |          333 |
     And user click on Update Your Card button
     Then a message should be displayed 'Payment Method updated Successfully'
 
@@ -49,7 +49,7 @@ Feature: Retail Account Page
     And User click on Add address option
     And user fill new address form with below information
       | country       | fullName | phoneNumber | streetAddress  | apt       | city      | state | zipCode |
-      | United States | Mahmood  |  2024567891 | 8939 Ozzie Run | Suite 192 | West Bill | Utah  |   73463 |
+      | United States | Ahmad  |  2024567891 | 8939 Ozzie Run | Suite 192 | West Bill | Utah  |   73463 |
     And User click Add Your Address button
     Then a message should be displayed 'Address Added Successfully'
 
@@ -58,7 +58,7 @@ Feature: Retail Account Page
     And User click on edit address option
     And user fill the new address form with below information
       | country       | fullName | phoneNumber | streetAddress | apt       | city      | state | zipCode |
-      | United States | Karim    |  2024567891 | 8939 Box Run  | Suite 192 | West Bill | Utah  |   73463 |
+      | United States | Salim    |  2024567891 | 8939 Box Run  | Suite 192 | West Bill | Utah  |   73463 |
     And User click update Your Address button
     Then a message should be displayed 'Address Updated Successfully'
 
