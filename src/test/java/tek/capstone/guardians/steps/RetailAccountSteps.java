@@ -107,6 +107,10 @@ public class RetailAccountSteps extends CommonUtility {
 			waitTillPresence(factory.retailOrderPage().returnSuccessMsg);
 			Assert.assertEquals(successMessage, factory.retailOrderPage().returnSuccessMsg.getText());
 			logger.info("Order was returned Successfully.");
+		} else if (successMessage.contains("Cart is Empty")) {
+			waitTillPresence(factory.retailOrderPage().deleteItemsSuccessMsg);
+			Assert.assertEquals(successMessage, factory.retailOrderPage().deleteItemsSuccessMsg.getText());
+			logger.info("Items are deleted from cart Successfully.");
 		}
 	}
 

@@ -8,7 +8,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		tags = "@TestAllScenarios", 
+		tags = "@SignIn,@HomePage,@RetailAccount,@RetailOrder", 
 		features = ("classpath:features"), 
 		glue = "tek.capstone.guardians", 
 		dryRun = false, 

@@ -36,6 +36,13 @@ public class RetailOrderPage extends BaseSetup {
 
 	@FindBy(id = "cartQuantity")
 	public WebElement cartIconQtty;
+	
+	// Locators of delete items from cart
+	@FindBy(xpath = "//span[text()='Delete']")
+	public List<WebElement> deleteBttns; 
+	
+	@FindBy(xpath = "//h1[text()='Your Shopping Cart is Empty']")
+	public WebElement deleteItemsSuccessMsg;
 
 	// Locators of Place an Order
 	@FindBy(xpath = "//img[starts-with(@alt, 'Apex Legends')]")

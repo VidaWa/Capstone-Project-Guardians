@@ -1,4 +1,4 @@
-@TestAllScenarios
+@RetailOrder
 Feature: Retail Order Page
 
   Background: 
@@ -17,6 +17,12 @@ Feature: Retail Order Page
     And User select quantity '2'
     And User click add to Cart button
     Then the cart icon quantity should change to '2'
+    
+  @deleteCartItems
+  Scenario: Verify user can delete cart items
+  	And User click on cart button
+  	And User click on delete button
+  	Then a message should be displayed 'Your Shopping Cart is Empty'  
 
   @placeOrder
   Scenario: Verify User can place an order with Shipping address and payment Method on file

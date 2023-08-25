@@ -66,6 +66,23 @@ public class RetailOrderSteps extends CommonUtility {
 
 	}
 
+	// Delete Items from cart
+	@When("User click on cart button")
+	public void userClickOnCartButton() {
+		click(factory.retailOrderPage().cartBttn);
+		logger.info("Cart button was clicked.");
+
+	}
+
+	@When("User click on delete button")
+	public void userClickOnDeleteButton() {
+		List<WebElement> deleteBttnsList = factory.retailOrderPage().deleteBttns;
+		for (int i = 0; i < deleteBttnsList.size(); i++) {
+				click(factory.retailOrderPage().deleteBttns.get(i));
+		}
+
+	}
+
 	// Place an order methods
 	@When("User changes the category to {string}")
 	public void userChangesTheCategoryToElectronics(String category) {
